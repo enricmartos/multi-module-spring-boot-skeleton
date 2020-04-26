@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 public class HealthCheckService {
 
     public String getHealthCheckStatus() {
-        return "Ok!-v2";
+        HealthCheck healthCheck = new HealthCheck("Ok!");
+        return healthCheck.getMessage();
     }
 }
